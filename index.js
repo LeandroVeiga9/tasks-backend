@@ -7,6 +7,7 @@ const bodyParser = require('body-parser');
 app.use(bodyParser.json());
 
 consign()
+  .include('./config/passport.js')
   .then('./config/middlewares.js')
   .then('./api')
   .then('./config/routes.js')
